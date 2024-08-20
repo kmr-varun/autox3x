@@ -1,0 +1,45 @@
+{
+  "id": "5",
+  "name": "When Date has Passed",
+  "workflowName": "",
+  "workflowDesc": "",
+  "workflowType": "datepassed",
+  "pipelineId": "pl_9f7a2c1d",
+  "pipelineName": "pipeline",
+  "orgId": "",
+  "createdBy": "",
+  "updatedBy": "",
+  "conditions": [
+    {
+      "columnId": "st_3b1f6a29",
+      "columnName": "Prospecting",
+      "columnType": "string",
+      "fromValue": "New",
+      "toValue": "Follow-up",
+      "multi": true,
+      "operatorString": "Changes",
+      "operator": "changes",
+      "conditionType": "AND"
+    },
+    {
+      "columnId": "dt_2d3c4b5e",
+      "columnName": "Expected Close Date",
+      "columnType": "date",
+      "fromValue": "",
+      "toValue": "2024-09-30",
+      "multi": false,
+      "operatorString": "Is",
+      "operator": "equals",
+      "conditionType": "AND"
+    }
+  ],
+  "actions": [],
+  "workflowData": [
+    {
+      "triggerFrequency": "day",
+      "selectedDate": "2024-01-01",
+      "triggerPeriod": "2",
+      "timeUnit": "days"
+    }
+  ]
+}

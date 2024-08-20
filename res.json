@@ -1,0 +1,42 @@
+{
+  "id": "1",
+  "workflowName": "",
+  "workflowDesc": "",
+  "workflowType": "",
+  "pipelineId": "",
+  "pipelineName": "",
+  "preview": false,
+  "orgId": "",
+  "createdBy": "",
+  "updatedBy": "",
+  "conditions": [
+    {
+      "columnId": "",
+      "columnName": "",
+      "columnType": "",
+      "uniqueValues": [],
+      "fromValue": "",
+      "toValue": "",
+      "operator": "",
+      "operatorString": "",
+      "multi": false
+    }
+  ],
+  "actions": {
+    "actions": [
+      {
+        "id": "",
+        "name": "",
+        "operation": "",
+        "setup": false,
+        "data": [
+          {
+            "name": "",
+            "type": "",
+            "value": []
+          }
+        ]
+      }
+    ]
+  }
+}

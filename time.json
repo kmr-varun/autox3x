@@ -1,0 +1,59 @@
+[
+  {
+    "workflowType": "datearrives",
+    "data": [
+      {
+        "triggerType": "same-day",
+        "triggerTime": "08:00",
+        "triggerPeriod": 1,
+        "triggerFrequency": "days",
+        "eventDate": "2024-08-15"
+      }
+    ]
+  },
+  {
+    "workflowType": "datearrives",
+    "data": [
+      {
+        "triggerType": "before",
+        "triggerTime": "08:00",
+        "triggerPeriod": 1,
+        "triggerFrequency": "days",
+        "eventDate": "2024-08-15"
+      }
+    ]
+  },
+  {
+    "workflowType": "datearrives",
+    "data": [
+      {
+        "triggerType": "after",
+        "triggerTime": "08:00",
+        "triggerPeriod": 1,
+        "triggerFrequency": "days",
+        "eventDate": "2024-08-15"
+      }
+    ]
+  },
+  {
+    "workflowType": "datepassed",
+    "workflowData": [
+      {
+        "triggerFrequency": "day",
+        "selectedDate": "2024-01-01",
+        "triggerPeriod": "1",
+        "timeUnit": "days"
+      }
+    ]
+  },
+  {
+    "workflowType": "timeinterval",
+    "workflowData": [
+      {
+        "triggerFrequency": "days",
+        "triggerTime": "08:00",
+        "triggerPeriod": 1
+      }
+    ]
+  }
+]

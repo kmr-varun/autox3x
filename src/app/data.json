@@ -1,0 +1,185 @@
+{
+  "workflow": {
+    "triggers": {
+      "trigger": [
+        {
+          "id": "1",
+          "name": "Item is Updated",
+          "type": "itemupdated",
+          "parameter": "text"
+        },
+        {
+          "id": "2",
+          "name": "Item is Added",
+          "type": "itemadded",
+          "parameter": "text"
+        },
+        {
+          "id": "3",
+          "name": "Item is Deleted",
+          "type": "itemdeleteed",
+          "parameter": "text"
+        },
+        {
+          "id": "4",
+          "name": "When Date Arrives",
+          "type": "datearrives",
+          "parameter": "text"
+        },
+        {
+          "id": "5",
+          "name": "When Date has Passed",
+          "type": "datepassed",
+          "parameter": "text"
+        },
+        {
+          "id": "6",
+          "name": "Every Time Interval",
+          "type": "timeinterval",
+          "parameter": "text"
+        }
+      ],
+      "integration": [
+        {
+          "id": "1",
+          "name": "Gmail",
+          "operation": "type",
+          "parameter": "text"
+        },
+        {
+          "id": "2",
+          "name": "Outlook",
+          "operation": "type",
+          "parameter": "text"
+        }
+      ]
+    },
+    "actions": {
+      "action": [
+        {
+          "id": "1",
+          "name": "Send Mail",
+          "operation": "sendmail",
+          "parameter": "text",
+          "setup": false,
+          "data": [
+            {
+              "name": "send To",
+              "type": "email",
+              "value": ["test1@test.com", "test2@test.com"]
+            },
+            {
+              "name": "Subject",
+              "type": "text",
+              "value": ["Hii"]
+            },
+            {
+              "name": "Attach Your File",
+              "type": "file",
+              "value": ["test.pdf"]
+            },
+            {
+              "name": "Body",
+              "type": "text",
+              "value": ["Hello, Test Mail"]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Notify",
+          "operation": "notify",
+          "parameter": "text",
+          "setup": false,
+          "data": [
+            {
+              "name": "send To",
+              "type": "email",
+              "value": ["test1@test.com", "test2@test.com"]
+            },
+            {
+              "name": "send To",
+              "type": "email",
+              "value": ["test1@test.com", "test2@test.com"]
+            },
+            {
+              "name": "send To",
+              "type": "email",
+              "value": ["test1@test.com", "test2@test.com"]
+            }
+          ]
+        }
+      ],
+      "integration": [
+        {
+          "id": "3",
+          "name": "Whatsapp",
+          "operation": "whatsapp",
+          "parameter": "text",
+          "setup": false
+        },
+        {
+          "id": "4",
+          "name": "Instagram",
+          "operation": "instagram",
+          "parameter": "text",
+          "setup": false
+        }
+      ]
+    }
+  },
+
+  "filters": {
+    "filter": [
+      {
+        "type": "string",
+        "conditions": [
+          { "operator": "changes", "label": "Changes", "multi": true },
+          { "operator": "equals", "label": "Is", "multi": false },
+          { "operator": "contains", "label": "Contains", "multi": false },
+          { "operator": "notEquals", "label": "Is Not", "multi": false },
+          { "operator": "startsWith", "label": "Starts With", "multi": false },
+          { "operator": "endsWith", "label": "Ends With", "multi": false },
+          { "operator": "isNull", "label": "Is Null", "multi": false },
+          { "operator": "isNotNull", "label": "Is Not Null", "multi": false }
+        ]
+      },
+      {
+        "type": "number",
+        "conditions": [
+          { "operator": "equals", "label": "Is", "multi": false },
+          { "operator": "notEquals", "label": "Is Not", "multi": false },
+          {
+            "operator": "greaterThanOrEqual",
+            "label": "Is Greater Than Equal To",
+            "multi": false
+          },
+          { "operator": "greaterThan", "label": "Is Greater Than", "multi": false },
+          { "operator": "lessThanOrEqual", "label": "Is Less Than Equal To", "multi": false },
+          { "operator": "lessThan", "label": "Is Less Than", "multi": false },
+          { "operator": "between", "label": "Is In The Range", "multi": true }
+        ]
+      },
+      {
+        "type": "bool",
+        "conditions": [
+          { "operator": "true", "label": "Is True", "multi": false },
+          { "operator": "false", "label": "Is False", "multi": false }
+        ]
+      },
+      {
+        "type": "date",
+        "conditions": [
+          { "operator": "equals", "label": "Is", "multi": false },
+          { "operator": "today", "label": "Is Today", "multi": false },
+          { "operator": "before", "label": "Is Before", "multi": false },
+          { "operator": "after", "label": "Is After", "multi": false },
+          { "operator": "inLast", "label": "Is In The Last", "multi": false },
+          { "operator": "between", "label": "Is In The Range", "multi": true },
+          { "operator": "isNull", "label": "Is Null", "multi": false },
+          { "operator": "isNotNull", "label": "Is Not Null", "multi": false }
+        ]
+      }
+    ]
+  }
+}
